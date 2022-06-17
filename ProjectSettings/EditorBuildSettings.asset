@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/First.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PlayerStats.unity
+    guid: cc5d02589550b2742b24a08294eddda4
+  - enabled: 1
+    path: Assets/Scenes/Cauldron.unity
+    guid: ee94c6a2471a3d043aa172284f02d5aa
+  - enabled: 1
+    path: Assets/Scenes/Forge.unity
+    guid: f9a914df76f5242458a873677851dc7a
+  - enabled: 1
+    path: Assets/Scenes/Inventary.unity
+    guid: 8fce2846e50bc3445bbabf51f8a5824e
+  - enabled: 1
+    path: Assets/Scenes/Collect.unity
+    guid: 8705079c7f34e1a4a8133be23d25eeb2
+  - enabled: 1
+    path: Assets/Scenes/Orders.unity
+    guid: d3db5e0773d7baf45815eb77bef5fcd4
+  - enabled: 1
+    path: Assets/Scenes/Options.unity
+    guid: 5c0ddec302cf7034d8b15ef4e726608b
+  m_configObjects: {}

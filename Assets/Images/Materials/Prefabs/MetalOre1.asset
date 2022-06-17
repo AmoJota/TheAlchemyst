@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2a977b410eb6747be1a5cb91ccc81a, type: 3}
+  m_Name: MetalOre1
+  m_EditorClassIdentifier: 
+  nameObject: MetalOre1
+  description: 
+  objectType: 9
+  level: 1
+  amount: 1000
+  prefab: {fileID: 3266641160688343375, guid: 43f5d862addd6ec49a13ecb7daea167f, type: 3}
+  id: 0

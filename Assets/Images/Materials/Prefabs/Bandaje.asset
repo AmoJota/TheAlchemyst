@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2a977b410eb6747be1a5cb91ccc81a, type: 3}
+  m_Name: Bandaje
+  m_EditorClassIdentifier: 
+  nameObject: Bandaje
+  description: 
+  objectType: 4
+  level: 1
+  amount: 0
+  prefab: {fileID: 5395969283278615405, guid: 380bcfd8ccca76f41a7f1d26bb70a120, type: 3}
