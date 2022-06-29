@@ -16,6 +16,6 @@ MonoBehaviour:
   description: 
   objectType: 9
   level: 1
-  amount: 4
+  amount: 20
   prefab: {fileID: 8395274337843346339, guid: 8fc0962355d35794b99badac6f9fe1fb, type: 3}
   id: 1002

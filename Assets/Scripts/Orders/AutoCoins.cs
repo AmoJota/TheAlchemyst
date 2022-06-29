@@ -7,7 +7,7 @@ using TMPro;
 
 public class AutoCoins : MonoBehaviour
 {
-    public int totalGold;
+    public static int totalGold;
     public int goldCoin, silverCoin, cupperCoin; 
     [SerializeField] TextMeshProUGUI textCupper, textSilver, textGold;
 

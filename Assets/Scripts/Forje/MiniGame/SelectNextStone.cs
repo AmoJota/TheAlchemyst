@@ -6,7 +6,6 @@ public class SelectNextStone : MonoBehaviour
 {
     [SerializeField] GameObject[] newPieces = new GameObject[5], allPieces;
 
-
     private void Start()
     {
         NextObject(false);
@@ -29,10 +28,5 @@ public class SelectNextStone : MonoBehaviour
                 }
             }
         }
-    }
-
-    void ObjectsCount()
-    {
-        
     }
 }

@@ -7,7 +7,7 @@ using TMPro;
 public class PayScames : MonoBehaviour
 {
     [SerializeField] ItemScriptable[] scames;
-    [SerializeField] TextMeshProUGUI[] scamesText;
+    [SerializeField] TextMeshProUGUI[] scamesText;  
     private void OnEnable()
     {
         GetValues();
@@ -19,6 +19,10 @@ public class PayScames : MonoBehaviour
             Inventory.singleton.RemoveItem(scame.GetItemScriptable());
             Inventory.singleton.RemoveItem(scame.GetItemScriptable());
         }
+    }
+    public void Value(int value)
+    {
+        PlayerPrefs.SetInt("Scame", value);  
     }
 
     void GetValues()

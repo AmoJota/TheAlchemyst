@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WinnerObjetive : MonoBehaviour
 {
-    float retroTimer = 4f;
+    float retroTimer = 3f;
     bool isWin = false;
     [SerializeField] GameObject winnerIs;
     Touch touch;
@@ -13,21 +13,13 @@ public class WinnerObjetive : MonoBehaviour
         if (isWin)
         {
             retroTimer -= Time.deltaTime;
-        }
+            Winner();
 
-        Winner();
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if ((touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled))
-        {
-            isWin = true;
-            Debug.Log("WIIIINEEEERRR!!");
         }
     }
-
-    void Winner()
+    public void Winner()
     {
+        isWin = true;
         if (retroTimer <= 0f)
         {
             winnerIs.SetActive(true);

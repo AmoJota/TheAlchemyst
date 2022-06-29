@@ -13,6 +13,7 @@ public class MoveStones : MonoBehaviour
     Touch touch;
     Vector3 pos, v3, offset;
     [SerializeField] SelectNextStone nextStone;
+    [SerializeField] WinnerObjetive winner;
     void Update()
     {
         if (Input.touchCount > 0)
@@ -30,11 +31,13 @@ public class MoveStones : MonoBehaviour
                 Moving();                                         
             }
 
-            if ((touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled) && item != null)
+            if ((touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled))
             {
+                GetParentDetachChildren();
                 EndMove();
             }
         }
+
     }
 
     void FirstTouch()
@@ -65,10 +68,9 @@ public class MoveStones : MonoBehaviour
     }
     void EndMove()
     {
-        GetParentDetachChildren();
         Invoke("NextStone", 5f);       
         item.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-        item = null;
+        Invoke("StoneContact", 4f);
     }
     void NextStone()
     {
@@ -76,8 +78,25 @@ public class MoveStones : MonoBehaviour
     }
     void GetParentDetachChildren()
     {
-        Transform parent = item.transform.parent;
-        parent.DetachChildren();
-        parent = null;
+        item.transform.SetParent(null, true);
+    }
+    void StoneContact()
+    {
+        if (item != null)
+        {
+            ContactPoint2D[] contact = new ContactPoint2D[10];
+
+            int contactItem = item.GetComponent<Rigidbody2D>().GetContacts(contact);
+
+            if (contactItem >= 1 && item.transform.position.y >= 1.6f)
+            {              
+                winner.Winner();
+
+                int coins = PlayerPrefs.GetInt("Reward");
+                int scame = PlayerPrefs.GetInt("Scame");
+
+                PlayerPrefs.SetInt("Reward", coins + scame);
+            }
+        }         
     }
 }
