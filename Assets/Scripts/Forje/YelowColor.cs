@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class YelowColor : MonoBehaviour
 {
-    SpriteRenderer renderer = null;
+    SpriteRenderer renderers;
 
     private void Awake()
     {
-        renderer = GetComponent<SpriteRenderer>();
+        renderers = GetComponent<SpriteRenderer>();
     }
     void ChangeColor()
     { 
-        renderer.color = Color.yellow;
+        renderers.color = Color.yellow;
     }
 }

@@ -25,7 +25,7 @@ public class Music : MonoBehaviour
     {
         audioSource.mute = false;
     }
-    void NextSong()
+    public void NextSong()
     {              
         audioSource.Stop();
         audioSource.clip = nextClip;

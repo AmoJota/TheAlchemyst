@@ -26,12 +26,12 @@ public class SoundOnOff : MonoBehaviour
     {
         if (soundToggle.isOn)
         {
-            Inventory.singleton.GetComponent<AudioSource>().mute = true;
+            Inventory.singleton.GetComponent<AudioSource>().mute = false;
             state = 0;
         }
         else
         {
-            Inventory.singleton.GetComponent<AudioSource>().mute = false;
+            Inventory.singleton.GetComponent<AudioSource>().mute = true;
             state = 1;
         }
     }

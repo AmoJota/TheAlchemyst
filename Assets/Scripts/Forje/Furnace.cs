@@ -5,7 +5,7 @@ using UnityEngine;
 public class Furnace : MonoBehaviour
 {
 
-    SpriteRenderer renderer = null;
+    SpriteRenderer renderers = null;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip clipForge, clipEndForge;
 
@@ -18,7 +18,7 @@ public class Furnace : MonoBehaviour
             controlTime = false;
             timer = 10;
             audioSource.Play();
-            renderer = other.gameObject.GetComponent<SpriteRenderer>();
+            renderers = other.gameObject.GetComponent<SpriteRenderer>();
         }
     }
     private void Update()
@@ -31,7 +31,7 @@ public class Furnace : MonoBehaviour
         if (timer <= 0 && !controlTime)
         {
             audioSource.Stop();
-            renderer.color = Color.green;
+            renderers.color = Color.green;
             audioSource.PlayOneShot(clipEndForge);
             controlTime = true;
         }

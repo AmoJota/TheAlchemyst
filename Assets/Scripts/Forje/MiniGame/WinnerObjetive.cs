@@ -5,7 +5,7 @@ using UnityEngine;
 public class WinnerObjetive : MonoBehaviour
 {
     float retroTimer = 3f;
-    bool isWin = false;
+    public bool isWin = false;
     [SerializeField] GameObject winnerIs;
     Touch touch;
     private void Update()
@@ -14,12 +14,10 @@ public class WinnerObjetive : MonoBehaviour
         {
             retroTimer -= Time.deltaTime;
             Winner();
-
         }
     }
     public void Winner()
     {
-        isWin = true;
         if (retroTimer <= 0f)
         {
             winnerIs.SetActive(true);

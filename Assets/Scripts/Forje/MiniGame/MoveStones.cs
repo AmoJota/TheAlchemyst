@@ -89,8 +89,8 @@ public class MoveStones : MonoBehaviour
             int contactItem = item.GetComponent<Rigidbody2D>().GetContacts(contact);
 
             if (contactItem >= 1 && item.transform.position.y >= 1.6f)
-            {              
-                winner.Winner();
+            {
+                winner.isWin = true;
 
                 int coins = PlayerPrefs.GetInt("Reward");
                 int scame = PlayerPrefs.GetInt("Scame");

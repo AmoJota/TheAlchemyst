@@ -346,7 +346,7 @@ MonoBehaviour:
         m_MethodName: GetScamesAmount
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: -2343101561830941033, guid: 7d0f74bd806fbca4dac6721e52ce5065, type: 3}
           m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1857,6 +1857,7 @@ MonoBehaviour:
   retroTimer: 100
   timeText: {fileID: 1452635749}
   loose: {fileID: 1524203897}
+  winnerObjetive: {fileID: 1248408992}
 --- !u!1 &416751776
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,7 +2106,7 @@ MonoBehaviour:
         m_MethodName: GetScamesAmount
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: -7362339635322377694, guid: 8fc0962355d35794b99badac6f9fe1fb, type: 3}
           m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -12178,7 +12179,7 @@ MonoBehaviour:
         m_MethodName: GetScamesAmount
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: -243754024289038923, guid: fce12e044bb1c6445acb4b13bd5dd3f5, type: 3}
           m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -14488,7 +14489,7 @@ GameObject:
   - component: {fileID: 1064558243}
   - component: {fileID: 1064558242}
   m_Layer: 5
-  m_Name: BlackSmithBtn(S)
+  m_Name: BlackSmithBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14511,7 +14512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 154, y: -100}
+  m_AnchoredPosition: {x: 154, y: -114}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1064558242
@@ -14590,7 +14591,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 335703312ab129a4983ab01bdc9909ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c04d0027e7a4ff247afc542afadc7e68, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15926,6 +15927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df486ea820a3dc44810f6e00db73b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWin: 0
   winnerIs: {fileID: 1695791931}
 --- !u!1 &1251416283
 GameObject:
@@ -16300,7 +16302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29, y: -127}
+  m_AnchoredPosition: {x: 29, y: -141}
   m_SizeDelta: {x: 283.56, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1284828605
@@ -16332,8 +16334,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282488948
-  m_fontColor: {r: 0.454902, g: 0.59607846, b: 0.25490198, a: 1}
+    rgba: 4278845695
+  m_fontColor: {r: 1, g: 0, b: 0.03915453, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -20566,7 +20568,7 @@ MonoBehaviour:
         m_MethodName: GetScamesAmount
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 3645409949693444860, guid: a2136c3615c445f47bc39f1f12123ef1, type: 3}
           m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0

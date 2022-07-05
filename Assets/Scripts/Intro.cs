@@ -5,6 +5,7 @@ using UnityEngine;
 public class Intro : MonoBehaviour
 {
     int intro = 0;
+    [SerializeField] Music music;
     void Start()
     {
         intro = PlayerPrefs.GetInt("Intro", 0);
@@ -23,6 +24,7 @@ public class Intro : MonoBehaviour
     { 
         PlayerPrefs.SetInt("Intro", 1);
         intro = 1;
+        music.NextSong();
         gameObject.SetActive(false);
     }
     private void OnApplicationQuit()

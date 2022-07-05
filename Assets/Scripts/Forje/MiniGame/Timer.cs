@@ -11,7 +11,8 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timeText;
 
     [SerializeField] GameObject loose;
-    
+
+    [SerializeField] WinnerObjetive winnerObjetive;
     void Update()
     {
         TimerText();
@@ -22,7 +23,7 @@ public class Timer : MonoBehaviour
         retroTimer -= Time.deltaTime;
         timeText.text = retroTimer.ToString("N0");
 
-        if (retroTimer <= 0)
+        if (retroTimer <= 0 && !winnerObjetive.isWin)
         {
             loose.SetActive(true);
             retroTimer = 0;
