@@ -23,12 +23,12 @@ public class SoundOnOff : MonoBehaviour
     {
         if (soundToggle.isOn)
         {
-            Inventory.singleton.GetComponent<AudioSource>().mute = true;
+            Inventory.singleton.GetComponent<AudioSource>().mute = false;
             PlayerPrefs.SetInt("Intro", 0);
         }
         else
         {
-            Inventory.singleton.GetComponent<AudioSource>().mute = false;
+            Inventory.singleton.GetComponent<AudioSource>().mute = true;
             PlayerPrefs.SetInt("Intro", 1);
         }
     }
