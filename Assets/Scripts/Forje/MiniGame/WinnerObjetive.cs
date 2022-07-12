@@ -7,7 +7,6 @@ public class WinnerObjetive : MonoBehaviour
     float retroTimer = 3f;
     public bool isWin = false;
     [SerializeField] GameObject winnerIs;
-    Touch touch;
     private void Update()
     {
         if (isWin)
@@ -16,10 +15,13 @@ public class WinnerObjetive : MonoBehaviour
             Winner();
         }
     }
-    public void Winner()
+    void Winner()
     {
         if (retroTimer <= 0f)
         {
+            int temp = PlayerPrefs.GetInt("Scame");
+            int total = temp + AutoCoins.totalGold;
+            PlayerPrefs.SetInt("Reward", total);
             winnerIs.SetActive(true);
         }
     }

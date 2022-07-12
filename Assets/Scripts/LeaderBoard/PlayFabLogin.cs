@@ -75,7 +75,9 @@ public class PlayFabLogin : MonoBehaviour
         };
 
         PlayFabClientAPI.UpdatePlayerStatistics(request, OnLeaderboardUpdate, OnError);
-    
+
+        
+
     }
     private void OnLeaderboardUpdate(UpdatePlayerStatisticsResult result)
     {
@@ -102,7 +104,9 @@ public class PlayFabLogin : MonoBehaviour
         };
 
         PlayFabClientAPI.GetLeaderboardAroundPlayer(request, OnLeaderboarAroundPlayerdGet, OnError);
-    
+
+        int temp = PlayerPrefs.GetInt("Reward");
+        SendLeaderboard(temp);
     }
     private void OnLeaderboarAroundPlayerdGet(GetLeaderboardAroundPlayerResult result)
     {

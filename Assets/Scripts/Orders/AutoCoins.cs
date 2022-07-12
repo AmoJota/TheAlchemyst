@@ -11,17 +11,15 @@ public class AutoCoins : MonoBehaviour
     public int goldCoin, silverCoin, cupperCoin; 
     [SerializeField] TextMeshProUGUI textCupper, textSilver, textGold;
 
-    PlayFabLogin login;
     private void Start()
     {
-        AutoCoinSystem();       
-
+        AutoCoinSystem();
     }
 
     void AutoCoinSystem()
     {
         totalGold = PlayerPrefs.GetInt("Reward");
-
+    
         goldCoin = Math.DivRem(totalGold, 10000, out int restGold);
         silverCoin = Math.DivRem(restGold, 100, out int restsilver);
         cupperCoin = restsilver;
@@ -36,11 +34,6 @@ public class AutoCoins : MonoBehaviour
     {
         int rewardGold = UnityEngine.Random.Range(6,46);
         totalGold += rewardGold;
-
-        login.SendLeaderboard(totalGold);
-
-
-        login = FindObjectOfType<PlayFabLogin>();
 
         PlayerPrefs.SetInt("Reward", totalGold);
 

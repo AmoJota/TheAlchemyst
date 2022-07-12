@@ -49,6 +49,11 @@ public class Inventory : MonoBehaviour
 
         }
     }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetInt("Intro", 0);
+    }
 }
 
 

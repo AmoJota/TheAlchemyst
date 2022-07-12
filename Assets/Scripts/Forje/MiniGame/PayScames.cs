@@ -7,7 +7,7 @@ using TMPro;
 public class PayScames : MonoBehaviour
 {
     [SerializeField] ItemScriptable[] scames;
-    [SerializeField] TextMeshProUGUI[] scamesText;  
+    [SerializeField] TextMeshProUGUI[] scamesText;
     private void OnEnable()
     {
         GetValues();

@@ -17,18 +17,13 @@ public class Intro : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-
         }
     }
     void LoadingComplete()
     { 
-        PlayerPrefs.SetInt("Intro", 1);
         intro = 1;
         music.NextSong();
+        PlayerPrefs.SetInt("Intro", 1);
         gameObject.SetActive(false);
-    }
-    private void OnApplicationQuit()
-    {
-        PlayerPrefs.SetInt("Intro", 0);
     }
 }

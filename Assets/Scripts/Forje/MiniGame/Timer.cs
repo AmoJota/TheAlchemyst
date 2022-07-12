@@ -13,9 +13,14 @@ public class Timer : MonoBehaviour
     [SerializeField] GameObject loose;
 
     [SerializeField] WinnerObjetive winnerObjetive;
+
+    public bool controlTime = false;
     void Update()
     {
-        TimerText();
+        if (!controlTime)
+        {
+            TimerText();
+        }
     }
 
     void TimerText()
@@ -27,6 +32,13 @@ public class Timer : MonoBehaviour
         {
             loose.SetActive(true);
             retroTimer = 0;
+            controlTime = true;           
         }
+    }
+
+    private void OnDisable()
+    {
+        controlTime = false;
+        retroTimer = 100f;
     }
 }

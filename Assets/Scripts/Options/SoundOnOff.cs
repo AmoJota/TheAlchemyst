@@ -6,16 +6,13 @@ using UnityEngine.UI;
 public class SoundOnOff : MonoBehaviour
 {
     [SerializeField] Toggle soundToggle;
-    int state = 1;
-
     private void OnEnable()
     {
-        int togglePrefs = PlayerPrefs.GetInt("Toggle", 0);
+        int togglePrefs = PlayerPrefs.GetInt("Intro");
 
         if (togglePrefs == 0)
         {         
             soundToggle.isOn = false;
-
         }
         else
         {
@@ -26,17 +23,13 @@ public class SoundOnOff : MonoBehaviour
     {
         if (soundToggle.isOn)
         {
-            Inventory.singleton.GetComponent<AudioSource>().mute = false;
-            state = 0;
+            Inventory.singleton.GetComponent<AudioSource>().mute = true;
+            PlayerPrefs.SetInt("Intro", 0);
         }
         else
         {
-            Inventory.singleton.GetComponent<AudioSource>().mute = true;
-            state = 1;
+            Inventory.singleton.GetComponent<AudioSource>().mute = false;
+            PlayerPrefs.SetInt("Intro", 1);
         }
-    }
-    private void OnDisable()
-    {
-        PlayerPrefs.SetInt("Toggle", state);
     }
 }
