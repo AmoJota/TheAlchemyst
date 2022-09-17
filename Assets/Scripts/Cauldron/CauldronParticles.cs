@@ -51,7 +51,8 @@ public class CauldronParticles : MonoBehaviour
             {
                 if (Inventory.singleton.inventary[i].prefab.GetComponent<SpriteRenderer>().sprite == itemToCraft.sprite)
                 {
-                    Inventory.singleton.AddItem(Inventory.singleton.inventary[i]);
+                    ItemScriptable item = Inventory.singleton.inventary[i];
+                    Inventory.singleton.AddItem(item);
                     break;
                 }
             }
