@@ -42,7 +42,7 @@ public class SpawnCollect : MonoBehaviour
 
             nextLoot[random].enabled = false;
 
-            random = Random.Range(0, 9);
+            random = Random.Range(0, nextLoot.Length);
 
             nextLoot[random].enabled = true;
 

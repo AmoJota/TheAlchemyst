@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e25a8fe53e49f44dad74136b972fef4, type: 3}
   m_Name: mision7
   m_EditorClassIdentifier: 
-  mision: Sanitary!!
+  mision: Mathew and Susan will be moving in the next few months. They have asked
+    you to help them prepare for their trip.
   id: 6

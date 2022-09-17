@@ -10,7 +10,7 @@ public class ChangeAvatar : MonoBehaviour
     [SerializeField] PlayerInfo[] playerInfo;
     [SerializeField] TMP_InputField writedName;
     TouchScreenKeyboard keyBoardAndoid;
-    string message = "";
+    public string message = "";
 
     int numberAvatar = 0;
     private void OnEnable()

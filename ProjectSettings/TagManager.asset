@@ -12,6 +12,7 @@ TagManager:
   - Myst
   - Avatar
   - Hammer
+  - LifeMonster
   layers:
   - Default
   - TransparentFX

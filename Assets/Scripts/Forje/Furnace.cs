@@ -40,13 +40,11 @@ public class Furnace : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-
         if (timer > 0)
         {
             controlTime = true; 
             timer = 10;
         }  
             audioSource.Stop();
-
     }
 }

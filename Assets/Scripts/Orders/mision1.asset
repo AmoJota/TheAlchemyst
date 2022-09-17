@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e25a8fe53e49f44dad74136b972fef4, type: 3}
   m_Name: mision1
   m_EditorClassIdentifier: 
-  mision: we need to heal a wounded person
-  id: 2
+  mision: Sir David needs supplies for the incoming war
+  id: 0

@@ -28,21 +28,21 @@ public class Orders : MonoBehaviour
         }        
     }
 
-    void Tier2Activated() // Mete objetos de Tier 2 en la lista item
-    {
-        for (int i = 0; i < itemT2.Count; i++)
-        {
-            item.Add(itemT2[i]);
-        }
-    }
+    //void Tier2Activated() // Mete objetos de Tier 2 en la lista item
+    //{
+    //    for (int i = 0; i < itemT2.Count; i++)
+    //    {
+    //        item.Add(itemT2[i]);
+    //    }
+    //}
 
-    void Tier3Activated() // Mete objetos de Tier 3 en la lista item
-    {
-        for (int i = 0; i < itemT3.Count; i++)
-        {
-            item.Add(itemT3[i]);
-        }
-    }
+    //void Tier3Activated() // Mete objetos de Tier 3 en la lista item
+    //{
+    //    for (int i = 0; i < itemT3.Count; i++)
+    //    {
+    //        item.Add(itemT3[i]);
+    //    }
+    //}
     private void Update()
     {
         if (SingletonTime.singleton.timeNextMision <= 0)

@@ -43,6 +43,7 @@ public class PlayFabLogin : MonoBehaviour
         if (result.InfoResultPayload.PlayerProfile != null)
         {
             name = result.InfoResultPayload.PlayerProfile.DisplayName;
+
         }
 
         if (name == null)
@@ -144,6 +145,8 @@ public class PlayFabLogin : MonoBehaviour
             DisplayName = nameField.text,
         };
 
+        ChangeAvatar change = FindObjectOfType<ChangeAvatar>();
+            change.message = nameField.text;
         PlayFabClientAPI.UpdateUserTitleDisplayName(request, OndisplayNameUpdate, OnError);
     }
 

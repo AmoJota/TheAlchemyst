@@ -11,27 +11,14 @@ public class BonusAdsOneEon : MonoBehaviour
 
 
     private RewardedAd rewardedAd;
-    private string RewardAD = "ca-app-pub-5146837764969591/6659141061"; 
-
-
-    
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(this);
-        }
-    }
+    private string RewardAD2 = "ca-app-pub-3940256099942544/5224354917";
+    private string realReward = "ca-app-pub-5146837764969591/6659141061";
 
     void Start()
     {
         MobileAds.Initialize(initStatus => { });
 
-        rewardedAd = new RewardedAd(RewardAD);
+        rewardedAd = new RewardedAd(realReward);
 
         this.rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
         this.rewardedAd.OnAdClosed += HandleRewardedAdClosed;

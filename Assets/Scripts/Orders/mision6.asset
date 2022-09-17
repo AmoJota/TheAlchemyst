@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e25a8fe53e49f44dad74136b972fef4, type: 3}
   m_Name: mision6
   m_EditorClassIdentifier: 
-  mision: We need to bring more for the pantry
+  mision: Joseph is recruiting brave soldiers with great skills in alchemy. Show
+    what you know.
   id: 5

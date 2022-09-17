@@ -36,6 +36,7 @@ public class ForgeItem : MonoBehaviour
             }
 
             GameObject temp = Instantiate(item.prefab, itemPosition.position, Quaternion.identity);
+            temp.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
     }
 }

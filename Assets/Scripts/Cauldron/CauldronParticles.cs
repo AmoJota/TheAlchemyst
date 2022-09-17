@@ -7,9 +7,9 @@ using TMPro;
 public class CauldronParticles : MonoBehaviour
 {
     Touch touch;
-    [SerializeField] GameObject particles = null, returnButton = null, craftedText = null;
+    [SerializeField] GameObject particles = null, returnButton = null, craftedText = null, instructions = null;
     [SerializeField] Image itemToCraft = null, itemParticles = null, chargeBar = null;
-    [SerializeField] Image[] allWhite = null;
+    [SerializeField] ObjectSelected objectSelected;
     float retroTimer = 0.2f;
     [SerializeField] AudioSource audioSource = null;
     [SerializeField] AudioClip clip = null;
@@ -46,6 +46,7 @@ public class CauldronParticles : MonoBehaviour
             chargeBar.fillAmount = 0f;
             returnButton.SetActive(true);
             craftedText.SetActive(true);
+            instructions.SetActive(false);
 
             for (int i = 0; i < Inventory.singleton.inventary.Count; i++)
             {
@@ -105,10 +106,7 @@ public class CauldronParticles : MonoBehaviour
     }
     private void OnDisable()
     {
-        for (int i = 0; i < allWhite.Length; i++)
-        {
-            allWhite[i].color = Color.white;
-        }
+        objectSelected.AllWhite();
 
         control = false;
         chargeBar.fillAmount = 1f;

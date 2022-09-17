@@ -17,7 +17,7 @@ public class Publicity : MonoBehaviour
 
     public static Publicity instance;
 
-    //string realRewardedID = "ca-app-pub-5146837764969591/6659141061";
+    string realRewardedID = "ca-app-pub-5146837764969591/6659141061";
     private void Awake()
     {
         if (instance = null)
@@ -31,10 +31,10 @@ public class Publicity : MonoBehaviour
 
         DontDestroyOnLoad(this);
     }
-
     private void OnEnable()
     {
-        rewardedAd = new RewardedAd(rewardedUnityID);       
+        rewardedAd = new RewardedAd(realRewardedID);       
+        
         this.rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
         this.rewardedAd.OnAdClosed += HandleRewardedAdClosed;
         AdRequest adReq = new AdRequest.Builder().Build();
@@ -55,20 +55,16 @@ public class Publicity : MonoBehaviour
         // Called when the ad is closed.
         this.rewardedAd.OnAdClosed += HandleRewardedAdClosed;
     }
-
-
     public void HandleRewardedAdLoaded(object sender, System.EventArgs args)
     {
         MonoBehaviour.print("HandleRewardedAdLoaded event received");
     }
-
     public void HandleRewardedAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
         MonoBehaviour.print(
             "HandleRewardedAdFailedToLoad event received with message: "
                              + args);
     }
-
     public void HandleRewardedAdOpening(object sender, System.EventArgs args)
     {
         MonoBehaviour.print("HandleRewardedAdOpening event received");
@@ -80,7 +76,6 @@ public class Publicity : MonoBehaviour
             "HandleRewardedAdFailedToShow event received with message: "
                              + args);
     }
-
     public void HandleRewardedAdClosed(object sender, System.EventArgs args)
     {
         Debug.Log("Se cierra el anuncio");
@@ -93,7 +88,6 @@ public class Publicity : MonoBehaviour
 
         LoadNextReward();
     }
-
     public void ShowReward()
     {
         if (rewardedAd.IsLoaded())
@@ -101,10 +95,9 @@ public class Publicity : MonoBehaviour
             rewardedAd.Show();
         }  
     }
-
     void LoadNextReward()
     {
-        rewardedAd = new RewardedAd(rewardedUnityID);
+        rewardedAd = new RewardedAd(realRewardedID);
         AdRequest adReq = new AdRequest.Builder().Build();
         rewardedAd.LoadAd(adReq);
         this.rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;

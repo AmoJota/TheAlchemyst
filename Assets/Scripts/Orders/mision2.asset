@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e25a8fe53e49f44dad74136b972fef4, type: 3}
   m_Name: mision2
   m_EditorClassIdentifier: 
-  mision: King's reward
+  mision: The blacksmith needs you!
   id: 1

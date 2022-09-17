@@ -11,10 +11,10 @@ public class ObjectSelected : MonoBehaviour
     [SerializeField] Image image = null;
     [SerializeField] Image[] imagesSelected = null;
     [SerializeField] Image[] tempImagesSelected = null;
-    [SerializeField] ChangeList changeList = null;
+    ChangeList changeList = null;
     int countImages = 0, countGreen = 0;
     [SerializeField] GameObject cauldronTouchParticles = null;
-
+    bool control = false;
     private void Awake()
     {
         changeList = FindObjectOfType<ChangeList>();
@@ -50,9 +50,17 @@ public class ObjectSelected : MonoBehaviour
         tempImagesSelected[4] = tempImage5;
     }
 
+    private void Update()
+    {
+        if (control)
+        {
+            SelectPositions();
+            control = false;
+        }   
+    }
     public void GoImages()
     {
-        SelectPositions();
+        control = true;
     }
     public void SelectPositions()
     {
@@ -82,13 +90,23 @@ public class ObjectSelected : MonoBehaviour
                 imagesSelected[i].color = Color.green;
                 changeList.spritesMatch = true;
                 countGreen++;
-                break;
+
+                if (countGreen == countImages)
+                {
+                    cauldronTouchParticles.SetActive(true);
+                    break;
+                }              
             }
-        }
-      
-        if (countGreen == countImages && countImages > 0)
+        }          
+    }
+
+    public void AllWhite()
+    {
+        for (int i = 0; i < imagesSelected.Length; i++)
         {
-            cauldronTouchParticles.SetActive(true);          
+            imagesSelected[i].color = Color.white;
+            countGreen = 0;
+            countImages = 0;
         }
     }
 }

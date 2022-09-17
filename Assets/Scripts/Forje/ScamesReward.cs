@@ -7,16 +7,17 @@ public class ScamesReward : MonoBehaviour
 {
     [SerializeField] Image scalesImage;
     int scales = 0;
-    [SerializeField] ItemScriptable item1, item2, item3, item4;
+    [SerializeField] ItemScriptable item1, item2, item3;
 
     private void OnEnable()
     {
-        scales = PlayerPrefs.GetInt("Scales");
         SetImageScales();
 
     }
     void SetImageScales()
     {
+        scales = PlayerPrefs.GetInt("Scales");
+
 
         if (scales == 1001)
         {
@@ -37,12 +38,6 @@ public class ScamesReward : MonoBehaviour
             Inventory.singleton.AddItem(item3);
 
         }
-        if (scales == 1004)
-        {
-            scalesImage.sprite = item4.prefab.GetComponent<SpriteRenderer>().sprite;
 
-            Inventory.singleton.AddItem(item4);
-
-        }
     }
 }

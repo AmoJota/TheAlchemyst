@@ -23,7 +23,6 @@ public class ChangeList : MonoBehaviour
         if (spritesMatch)
         {
             ClearView();
-            spritesMatch = false;
         }
     }
 
@@ -58,6 +57,7 @@ public class ChangeList : MonoBehaviour
                 temp.transform.position = temp.transform.parent.position;
                 int itemAmount = temp.GetComponent<Item>().GetScriptableAmount(); 
                 objectsInView[index].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = itemAmount.ToString();
+                spritesMatch = false;
 
                 index++;
             }

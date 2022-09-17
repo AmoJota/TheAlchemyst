@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 1e4634d348e5e234389866b530158460
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Taylor Gothic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 51349062cf02e984cb6c6d260b904f13, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e25a8fe53e49f44dad74136b972fef4, type: 3}
   m_Name: mision8
   m_EditorClassIdentifier: 
-  mision: We need to bring pills for the sicks
+  mision: Last night the king ate too much and is not feeling well. Could you help
+    him?
   id: 7
