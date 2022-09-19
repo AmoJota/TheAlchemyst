@@ -7,7 +7,9 @@ using TMPro;
 [CreateAssetMenu]
 public class ScriptableOrder : ScriptableObject
 {
-    [TextArea(1,4)]
+    [SerializeField] GameObject scriptablePrefab;
+
+    [TextArea(1, 4)]
     [SerializeField] string mision = null;
     public int id = 0;
     public string RescueMision()
@@ -15,5 +17,8 @@ public class ScriptableOrder : ScriptableObject
         return mision;
     }
 
-
+    public GameObject RescueObject()
+    {
+        return scriptablePrefab;
+    }
 }

@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7498568eef6b5bd4d831325bc109bffb, type: 3}
-  m_Name: 3
+  m_Script: {fileID: 11500000, guid: 4e25a8fe53e49f44dad74136b972fef4, type: 3}
+  m_Name: mision21
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  text: The alchemists need a blue potion
-  isEmpty: 0
-  id: 0
-  number: 2
+  scriptablePrefab: {fileID: 7940839128629735881, guid: d0a5aed8272f6e74fb1dad94026e44a8, type: 3}
+  mision: The court needs a purple elixir
+  id: 20

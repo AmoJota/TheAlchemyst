@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e25a8fe53e49f44dad74136b972fef4, type: 3}
   m_Name: mision2
   m_EditorClassIdentifier: 
+  scriptablePrefab: {fileID: 18397959522437591, guid: ab45f1c5706e6f446affa7b194fc56e1, type: 3}
   mision: The blacksmith needs you!
   id: 1

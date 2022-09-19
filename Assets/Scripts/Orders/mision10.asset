@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e25a8fe53e49f44dad74136b972fef4, type: 3}
   m_Name: mision10
   m_EditorClassIdentifier: 
-  mision: The inn's chef needs this ingredient to make his great speciality.
+  scriptablePrefab: {fileID: 3639772938327637480, guid: 34e5f23c6223e3b40b137430dc1cb31e, type: 3}
+  mision: The inn's chef needs meat
   id: 9

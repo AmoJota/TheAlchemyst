@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: 4
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  text: 
-  prefabNumber: 0
-  prefabText: 0
+  text: The alchemists need a blue potion
   isEmpty: 0
-  id: 3
+  id: 0
+  number: 3

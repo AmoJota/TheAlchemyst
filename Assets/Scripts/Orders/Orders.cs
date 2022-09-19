@@ -12,13 +12,17 @@ public class Orders : MonoBehaviour
     [SerializeField] TextMeshProUGUI[] textOrders = null;
     [SerializeField] FourOrders[] fourOrders;
     //bool tier2 = false;
+
+    int empty, id;
     private void Awake()
     {
         //Tier2Activated();
         //Tier3Activated();
+        
     }
     private void Start()
     {
+        Emptys();
 
         ExistentMisions();
 
@@ -26,6 +30,18 @@ public class Orders : MonoBehaviour
         {
             NewMision();
         }        
+    }
+
+    void Emptys()
+    {
+        for (int i = 0; i < fourOrders.Length; i++)
+        {
+            empty = PlayerPrefs.GetInt("IsEmpty" + i);
+            id = PlayerPrefs.GetInt("id" + i);
+
+            fourOrders[i].isEmpty = empty;
+            fourOrders[i].id = id;
+        }
     }
 
     //void Tier2Activated() // Mete objetos de Tier 2 en la lista item
@@ -55,56 +71,35 @@ public class Orders : MonoBehaviour
     void ExistentMisions()
     {
         for (int exist = 0; exist < fourOrders.Length; exist++)
-        {        
-            int mision = fourOrders[exist].prefabNumber; ;
-            int textMision = fourOrders[exist].prefabText;
-            int empty = fourOrders[exist].isEmpty;
-
-            if (empty == 1)
+        {                             
+                      
+            if (fourOrders[exist].isEmpty == 1)
             {
-                int i = 0;
+                textOrders[exist].text = orders[id].RescueMision();
 
-                while (i < orders.Length)
-                {
-                    if (orders[i].id == textMision)
-                    {
-                        textOrders[exist].text = orders[textMision].RescueMision();
-                    }
-                    i++;
-                }
-
-                int i2 = 0;
-
-                while (i2 < item.Count)
-                {
-                    if (item[i2].id == mision)
-                    {
-                        GameObject temp = Instantiate(item[mision].prefab, imageOrders[exist].transform.position, Quaternion.identity);
-                    }
-                    i2++;
-                }
-            }
-            else if(empty == 1)
-            {
-                exist++;
+                GameObject temp = Instantiate(orders[id].RescueObject(), imageOrders[exist].transform.position, Quaternion.identity);
             }
         }
     }
     void NewMision()
     {
         for (int mision = 0; mision < fourOrders.Length; mision++)
-        {
+        {           
             if (fourOrders[mision].isEmpty == 0)
             {
-                int randomItem = Random.Range(0, item.Count);
-                int randomText = Random.Range(0, textOrders.Length);
-                textOrders[mision].text = orders[randomText].RescueMision();
-              
-                fourOrders[mision].prefabNumber = item[randomItem].id;
-                fourOrders[mision].prefabText = orders[randomText].id;
-                fourOrders[mision].isEmpty = 1;
 
-                GameObject temp = Instantiate(item[randomItem].prefab, imageOrders[mision].transform.position, Quaternion.identity);
+                int randomOrder = Random.Range(0, orders.Length);
+
+                textOrders[mision].text = orders[randomOrder].RescueMision();
+
+                PlayerPrefs.SetInt("IsEmpty" + mision, 1);
+                PlayerPrefs.SetInt("id" + mision, orders[randomOrder].id);
+
+                Debug.Log(empty);
+                Debug.Log(id);
+
+
+                GameObject temp = Instantiate(orders[randomOrder].RescueObject(), imageOrders[mision].transform.position, Quaternion.identity);
 
                 break;
             }

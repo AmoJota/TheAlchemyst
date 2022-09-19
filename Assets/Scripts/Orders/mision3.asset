@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e25a8fe53e49f44dad74136b972fef4, type: 3}
   m_Name: mision3
   m_EditorClassIdentifier: 
+  scriptablePrefab: {fileID: 6320985396220662956, guid: fc3d52219524b7249b5f6883c94b3ab3, type: 3}
   mision: "Liliana\xB4s cat is sick, Please help him!"
   id: 2

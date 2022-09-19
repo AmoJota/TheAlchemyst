@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e25a8fe53e49f44dad74136b972fef4, type: 3}
   m_Name: mision9
   m_EditorClassIdentifier: 
+  scriptablePrefab: {fileID: 1886369633158045026, guid: 2d6a40cadf808d7468b35175330c26df, type: 3}
   mision: "We need this object to cure Anna\xB4s  migraine."
   id: 8

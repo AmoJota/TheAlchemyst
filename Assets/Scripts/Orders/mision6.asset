@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e25a8fe53e49f44dad74136b972fef4, type: 3}
   m_Name: mision6
   m_EditorClassIdentifier: 
+  scriptablePrefab: {fileID: 2162624257964424622, guid: b07719ef494d6a14f9eeed95f3cd4408, type: 3}
   mision: Joseph is recruiting brave soldiers with great skills in alchemy. Show
     what you know.
   id: 5

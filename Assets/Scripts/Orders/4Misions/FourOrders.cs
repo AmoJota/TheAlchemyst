@@ -10,5 +10,6 @@ public class FourOrders : ScriptableObject
     public GameObject prefab;
     [TextArea(1, 4)] public string text;
 
-    public int prefabNumber, prefabText, isEmpty, id;
+
+    public int  isEmpty, id, number;
 }
