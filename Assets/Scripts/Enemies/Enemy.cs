@@ -6,33 +6,50 @@ using TMPro;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] int life = 100;
+    EnemyLife enemyLife;
+    Image image;
     Game game;
+    float lifeM = 100f;
+    Battle battle;
     private void Awake()
     {
         game = FindObjectOfType<Game>();
+        enemyLife = FindObjectOfType<EnemyLife>();
+        battle = FindObjectOfType<Battle>();
+       
     }
-
     private void OnEnable()
     {
-        game.ChangeText(life);
+        game.ChangeText(lifeM);       
     }
-    public void AddLife(int recover)
+    public void ModifyLife(float damage)
     {
-        life += recover;
+        
+        lifeM += damage;
+        MaxLife();
+        enemyLife.SetLife(lifeM);
+        game.ChangeText(lifeM);
         Win();
     }
-
+    
     public void Win()
     {
-        game.ChangeText(life);
-
-        if (life <= 0)
+        if (lifeM <= 0)
         {
-            life = 0;
-            game.ChangeText(life);
+            battle.BattleOff();
+            lifeM = 0;
+            game.ChangeText(lifeM);
             game.Winner();
             Destroy(gameObject);
+        }
+
+       
+    }
+    void MaxLife()
+    {
+        if (lifeM > 100)
+        {
+            lifeM = 100;
         }
     }
 }

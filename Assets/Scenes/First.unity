@@ -4929,6 +4929,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: daccfff79b5474c4dac933236fe79609, type: 2}
   - {fileID: 11400000, guid: 20a46b7572d247544a8b1566a3e9059c, type: 2}
   writedName: {fileID: 717616547}
+  message: 
 --- !u!1 &1524115133
 GameObject:
   m_ObjectHideFlags: 0

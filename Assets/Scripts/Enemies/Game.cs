@@ -48,7 +48,7 @@ public class Game : MonoBehaviour
         youWin.SetActive(true);
     }
 
-    public void ChangeText(int lifeMonster)
+    public void ChangeText(float lifeMonster)
     {
         lifeText.text = "Life: " +  lifeMonster.ToString();
     }

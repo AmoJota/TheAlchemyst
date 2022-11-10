@@ -7,6 +7,7 @@ public class WinnerObjetive : MonoBehaviour
     float retroTimer = 3f;
     public bool isWin = false;
     [SerializeField] GameObject winnerIs;
+    [SerializeField] Timer time;
     private void Update()
     {
         if (isWin)
@@ -23,6 +24,7 @@ public class WinnerObjetive : MonoBehaviour
             int total = temp + AutoCoins.totalGold;
             PlayerPrefs.SetInt("Reward", total);
             winnerIs.SetActive(true);
+            time.controlTime = true;
         }
     }
 }

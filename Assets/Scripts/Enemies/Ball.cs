@@ -7,7 +7,7 @@ using TMPro;
 public class Ball : MonoBehaviour
 {
     float time = 2f;
-    int life;
+    int damage;
     TextMeshPro text;
     Game game;
     Enemy enemy;
@@ -33,9 +33,9 @@ public class Ball : MonoBehaviour
     void Stats()
     {
         time = Random.Range(1, 2f);
-        life = Random.Range(-25, 20);
+        damage = Random.Range(-25, 20);
 
-        text.text = life.ToString();
+        text.text = damage.ToString();
     }
    
     void TimeLife()
@@ -63,8 +63,8 @@ public class Ball : MonoBehaviour
     }
 
     private void OnMouseDown()
-    {        
-       enemy.AddLife(life);
+    {
+       enemy.ModifyLife(damage);
        Destroy(transform.parent.gameObject);
     }
 }

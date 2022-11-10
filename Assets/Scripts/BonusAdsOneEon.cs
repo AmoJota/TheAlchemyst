@@ -13,7 +13,7 @@ public class BonusAdsOneEon : MonoBehaviour
     private RewardedAd rewardedAd;
     private string RewardAD2 = "ca-app-pub-3940256099942544/5224354917";
     private string realReward = "ca-app-pub-5146837764969591/6659141061";
-
+              
     void Start()
     {
         MobileAds.Initialize(initStatus => { });
@@ -53,7 +53,7 @@ public class BonusAdsOneEon : MonoBehaviour
         double amount = args.Amount;
         
         SingletonTime.singleton.rest = 0;
-
+        
     }
 
     public void HandleRewardedAdClosed(object sender, EventArgs args)
