@@ -8,15 +8,15 @@ public class SoundOnOff : MonoBehaviour
     [SerializeField] Toggle soundToggle;
     private void OnEnable()
     {
-        int togglePrefs = PlayerPrefs.GetInt("Intro");
+        int togglePrefs = PlayerPrefs.GetInt("Sound");
 
         if (togglePrefs == 0)
-        {         
-            soundToggle.isOn = false;
+        {
+            soundToggle.isOn = true;
         }
         else
         {
-            soundToggle.isOn = true;
+            soundToggle.isOn = false;
         }
     }
     public void GeneralSoundOnOff()
@@ -24,12 +24,12 @@ public class SoundOnOff : MonoBehaviour
         if (soundToggle.isOn)
         {
             Inventory.singleton.GetComponent<AudioSource>().mute = false;
-            PlayerPrefs.SetInt("Intro", 0);
+            PlayerPrefs.SetInt("Sound", 0);
         }
         else
         {
             Inventory.singleton.GetComponent<AudioSource>().mute = true;
-            PlayerPrefs.SetInt("Intro", 1);
+            PlayerPrefs.SetInt("Sound", 1);
         }
     }
 }

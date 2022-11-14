@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Music : MonoBehaviour
 {
     AudioSource audioSource;
-    [SerializeField] AudioClip nextClip, newclip;
+    [SerializeField] AudioClip nextClip;
 
     private void Awake()
     {
@@ -21,21 +21,10 @@ public class Music : MonoBehaviour
         
         audioSource.loop = false;
     }
-    private void Start()
-    {
-        audioSource.mute = false;
-    }
     public void NextSong()
     {              
         audioSource.Stop();
         audioSource.clip = nextClip;
-        audioSource.Play();
-    }
-    public void NewSong()
-    {
-        audioSource.Stop();
-        audioSource.loop = true;
-        audioSource.clip = newclip;
         audioSource.Play();
     }
 }

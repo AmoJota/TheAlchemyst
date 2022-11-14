@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac897b1582118ba429a6f82b59098f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 1922991638}
+  musicOn: {fileID: 1922991636}
 --- !u!114 &12649325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1022,7 +1022,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1922991638}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: NewSong
         m_Mode: 1
@@ -3281,7 +3281,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1922991638}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: NewSong
         m_Mode: 1
@@ -5895,7 +5895,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1922991638}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: NewSong
         m_Mode: 1
@@ -6129,7 +6129,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1922991638}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: NewSong
         m_Mode: 1
@@ -6509,7 +6509,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1922991638}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: NewSong
         m_Mode: 1
@@ -7043,7 +7043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1922991637
 Transform:
   m_ObjectHideFlags: 0
@@ -7067,11 +7067,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1922991636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cdd99dc82cb8944da59047a816df23d, type: 3}
+  m_Script: {fileID: 11500000, guid: 88049b1fe02a91d47bca234f5bc6036b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextClip: {fileID: 8300000, guid: 9d0401bcecc129b44a99ce46f5e5d992, type: 3}
-  newclip: {fileID: 8300000, guid: eded8d4afd40d7f42b91bfb97111c3bd, type: 3}
+  newclip: {fileID: 8300000, guid: 9d0401bcecc129b44a99ce46f5e5d992, type: 3}
 --- !u!1 &1926558397
 GameObject:
   m_ObjectHideFlags: 0
@@ -7572,7 +7571,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1922991638}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: NewSong
         m_Mode: 1
